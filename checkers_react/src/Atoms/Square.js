@@ -1,7 +1,13 @@
 import React from 'react'
 import "./Square.css"
+import { store } from "../redux/store"
 
 const Square = ({ color, name }) => {
+
+   const { [name]: piece } = store.getState()
+   // console.log("Square Component name is", piece)
+
+
 
    const handleMouseDown = (e) => {
       console.log("Square Component MouseDown Event", e.target.title)
@@ -17,8 +23,11 @@ const Square = ({ color, name }) => {
          title={name}
          onMouseDown={handleMouseDown}
          onMouseUp={handleMouseUp}
-         style={{backgroundColor: color}}
+         style={{ backgroundColor: color }}
       >
+         <div className="Square-piece-container">
+            {piece ? piece : ""}
+         </div>
       </div>
    )
 }
