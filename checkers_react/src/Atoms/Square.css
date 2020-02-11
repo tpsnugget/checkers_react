@@ -4,6 +4,10 @@
    border: 2px solid black;
    margin: 0.1rem;
    border-radius: 0.2rem;
+   display: flex;
+   font-size: 5rem;
+   justify-content: center;
+   align-content: center;
 }
 
 .odd {
