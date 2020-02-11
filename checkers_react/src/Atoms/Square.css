@@ -1,0 +1,11 @@
+.Square-main-container {
+   width: 100px;
+   height: 100px;
+   border: 2px solid black;
+   margin: 0.1rem;
+   border-radius: 0.2rem;
+}
+
+.odd {
+   background-color: lightgray;
+}
