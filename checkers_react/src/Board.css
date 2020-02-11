@@ -1,0 +1,6 @@
+.Board-main-container {
+   width: 100vw;
+   margin-top: 5rem;
+   display: flex;
+   justify-content: center;
+}
