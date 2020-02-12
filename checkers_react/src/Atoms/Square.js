@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Square.css"
 import { store } from "../redux/store"
+import isLegalMove from "../helpers"
+import { updateStart, updateStop } from "../redux/actions"
 
 const Square = ({ color, name }) => {
 
@@ -10,11 +12,14 @@ const Square = ({ color, name }) => {
 
 
    const handleMouseDown = (e) => {
-      console.log("Square Component MouseDown Event", e.target.title)
+      // console.log("Square Component MouseDown Event", e.target.title)
+      store.dispatch(updateStart(e.target.title))
    }
 
    const handleMouseUp = (e) => {
-      console.log("Square Component MouseUp Event", e.target.title)
+      // console.log("Square Component MouseUp Event", e.target.title)
+      store.dispatch(updateStop(e.target.title))
+      console.log("Return from isLegalMove is", isLegalMove())
    }
 
    return (
